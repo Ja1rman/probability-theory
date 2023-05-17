@@ -72,8 +72,6 @@ for i in range(n):
         j += 1
     y[j-1] += 1
 del y[-1]
-print(x)
-print(y)  
 plt.stairs(y,x)
 plt.show()
 plt.plot(x, y)
