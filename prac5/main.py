@@ -31,7 +31,7 @@ print(f'x_max: {input_arr[-1]}')
 print(f'R: {input_arr[-1]-input_arr[0]}')
 # Мат ожидание и среднеквадратическое отклонение
 print(f'M(X): {m}')
-d = m2-m**2
+d = (m2-m**2)*n/(n-1)
 print(f'D(X): {d}')
 sig = math.sqrt(d)
 print(f'σ: {sig}')
