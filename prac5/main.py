@@ -75,7 +75,6 @@ j = 1
 for i in range(n):
     while input_arr[i] > x[j]:
         j += 1
-        print(i, j)
     y[j-1] += 1
 
 del y[-1]
