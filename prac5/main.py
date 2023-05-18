@@ -64,7 +64,7 @@ plt.show()
 x = []
 x2 = []
 y = []
-h = (input_arr[-1]-input_arr[0])/len(input_arr)
+h = (input_arr[-1]-input_arr[0])/(1+math.log2(n))
 ii = input_arr[0]
 while ii < input_arr[-1]+h:
     x2.append(ii+h/2)
