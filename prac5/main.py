@@ -62,25 +62,27 @@ plt.step(x, acc_freq)
 plt.show()
 # Гистограмма и полигон приведённых частот
 x = []
-x2 = []
 y = []
 h = (input_arr[-1]-input_arr[0])/(1+math.log2(n))
 ii = input_arr[0]
-while ii < input_arr[-1]+h:
-    x2.append(ii+h/2)
-    x.append(ii)
+while ii <= input_arr[-1]:
+    x.append(ii-h/2)
     y.append(0)
     ii += h
+x.append(ii-h/2)
+y.append(0)
 j = 1
+print('Интервалы:')
+for i in range(len(x)-1):
+    print(f'{x[i]} - {x[i+1]}')
 for i in range(n):
     while input_arr[i] > x[j]:
         j += 1
     y[j-1] += 1
-
 del y[-1]
-del x2[-1]
 
 plt.stairs(y,x)
 plt.show()
-plt.plot(x2, y)
+del x[-1]
+plt.plot(x, y)
 plt.show()
