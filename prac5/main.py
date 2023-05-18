@@ -18,10 +18,13 @@ for i in range(n):
     fi = input_arr.count(input_arr[i])
     m += input_arr[i]*fi/n
     m2 += fi/n * input_arr[i]**2
-    if input_arr[i] == prev: continue
+    if input_arr[i] == prev: 
+        prev = input_arr[i]
+        continue
     rel_freq.append(fi/n)
     acc_freq.append(round(acc_freq[-1]+fi/n, 2))
     print(f'{input_arr[i]}\t{fi}\t{fi/n}')
+    prev = input_arr[i]
 # Экстремальные значения и размах
 print(f'\nx_min: {input_arr[0]}')
 print(f'x_max: {input_arr[-1]}')
@@ -72,6 +75,7 @@ j = 1
 for i in range(n):
     while input_arr[i] > x[j]:
         j += 1
+        print(i, j)
     y[j-1] += 1
 
 del y[-1]
